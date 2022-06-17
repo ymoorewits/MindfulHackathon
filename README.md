@@ -7,23 +7,21 @@ Documentation for the Mindful Hackathon
 
 - Visit https://deno.land/ and follow the instructions for your computer’s operating system. 
 
-- Check that the install was successful by entering deno --version in your CLI. 
+- In your computer’s CLI enter the following:
+  `deno --version`
+
+
+### Install/Update Git on your computer 
+
+- Visit https://git-scm.com/book/en/v2/Getting-Started-Installing-Git and follow the instructions for your computer’s operating system. 
 
  
+### Install Docker if you would like to run JSphere within a container (Optional/Advance) 
 
-Install/Update Git on your computer 
-
-Visit https://git-scm.com/book/en/v2/Getting-Started-Installing-Git and follow the instructions for your computer’s operating system. 
-
- 
-
-Install Docker if you would like to run JSphere within a container (Optional/Advance) 
-
-Visit https://docs.docker.com/get-docker/ and follow the instructions for your computer’s operating system. 
+- Visit https://docs.docker.com/get-docker/ and follow the instructions for your computer’s operating system. 
 
  
+### Install the JSphere CLI tool 
 
-Install the JSphere CLI tool 
-
-In your computer’s CLI enter the following: 
-deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js 
+- In your computer’s CLI enter the following: 
+  deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js 
