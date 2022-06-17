@@ -1,9 +1,9 @@
 # Mindful Hackathon
 Documentation for the Mindful Hackathon
 
-##Environment Setup 
+## Environment Setup 
 
-###Install the Deno runtime on your computer 
+### Install the Deno runtime on your computer 
 
 - Visit https://deno.land/ and follow the instructions for your computer’s operating system. 
 
