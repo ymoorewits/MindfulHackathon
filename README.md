@@ -45,23 +45,28 @@ jsphere
 
 - This will start the JSphere CLI tool and you should see a `JSPHERE>` prompt. 
 
-In the JSphere CLI enter the following: 
+- In the JSphere CLI enter the following: 
+```
 create project Mindful --init 
+```
 
-You should now see a folder named Mindful in your JSphereProjects folder and your JSphere CLI should now display a JSPHERE:Mindful> prompt. 
+- You should now see a folder named `Mindful` in your `JSphereProjects` folder and your JSphere CLI should now display a `JSPHERE:Mindful>` prompt. 
 
  
+### Start JSphere Server 
 
-Start JSphere Server 
+- In the JSphere CLI enter the following: 
+```
+run
+```
 
-In the JSphere CLI enter the following: 
-run 
+- The JSphere server should start and you should see the message `JSphere Application Server` is running. 
 
-The JSphere server should start and you should see the message JSphere Application Server is running. 
+- Open a browser and enter into your navigation bar the following: 
+```
+http://localhost/app/client/index.html
+```
 
-Open a browser and enter into your navigation bar the following: 
-http://localhost/app/client/index.html 
+- You should see displayed in your browser the message `Hello JSphere`. 
 
-You should see displayed in your browser the message Hello JSphere. 
-
-Once the JSphere server is running you will no longer have access to the JSphere CLI.  You will have to open another instance of your computer’s CLI and start the JSphere CLI tool again. 
+- **Once the JSphere server is running you will no longer have access to the JSphere CLI.  You will have to open another instance of your computer’s CLI and start the JSphere CLI tool again.** 
