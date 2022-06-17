@@ -24,4 +24,4 @@ Documentation for the Mindful Hackathon
 ### Install the JSphere CLI tool 
 
 - In your computer’s CLI enter the following: 
-  deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js 
+  `deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js`
