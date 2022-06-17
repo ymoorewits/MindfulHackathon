@@ -106,7 +106,7 @@ message.attributes = { method: 'GET' };
  
 ```
 export async function appversion(ctx: any) : Promise<any> { 
-    return ctx.response.json({ major: 0, minor: 0, patch: 6}); 
+    return ctx.response.json({ major: 0, minor: 0, patch: 6 }); 
 } 
 appversion.attributes = { method: 'GET' };
 ```
@@ -114,4 +114,9 @@ appversion.attributes = { method: 'GET' };
 - Using your browser enter into the navigation bar the following: 
 ```
 http://localhost/app/server/index/appversion
+```
+
+- You should see displayed in your browser the following:
+```
+{ major: 0, minor: 0, patch: 6 }
 ```
