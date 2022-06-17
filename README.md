@@ -8,7 +8,7 @@ Documentation for the Mindful Hackathon
 - Visit https://deno.land/ and follow the instructions for your computer’s operating system. 
 
 - In your computer’s CLI enter the following:
-  `deno --version`
+  ```deno --version```
 
 
 ### Install/Update Git on your computer 
@@ -24,4 +24,4 @@ Documentation for the Mindful Hackathon
 ### Install the JSphere CLI tool 
 
 - In your computer’s CLI enter the following: 
-  `deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js`
+  ```deno install -n=jsphere  --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js```
