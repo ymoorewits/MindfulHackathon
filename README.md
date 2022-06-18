@@ -128,10 +128,10 @@ appversion.attributes = { method: 'GET' };
 
 ### How do I access data passed to an endpoint? 
 
-- Let's say we had the following HTTP request arrive at our application's API endpoint:
-Request URL: `http://localhost/app/server/user/add`
-Request Method: `POST`
-Request Body:
+- Let's say we had the following HTTP request arrive at our application's API endpoint:<br/>
+Request URL: `http://localhost/app/server/user/add`<br/>
+Request Method: `POST`<br/>
+Request Body:<br/>
 ```
 {
     "email": "adam@eden.com",
