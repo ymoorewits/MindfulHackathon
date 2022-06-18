@@ -214,3 +214,51 @@ export async function add(ctx: any) : Promise<any> {
 } 
 add.attributes = { method: 'POST' };
 ```
+
+## The Mindful Application's API Requirements 
+
+### Mindful User
+- A Mindful user can be created, retrieved, updated and deleted.
+- A Mindful user has the following schema:
+```
+{
+    id: <UUID> [required] - A unique identifier for the user
+    fname: <string> [required] - The first name of the user
+    lname: <string> - The last name of the user
+    email: <string> [required] - The email address of the user
+}
+```
+
+### Mindful Mood
+- A Mindful mood can be created, retrieved, updated and soft deleted
+- A Mindful mood has the following schema:
+```
+{
+    id: <UUID> [required] - A unique identifier for the mood
+    name: <string> [required] - The name of a mood. E.g., anxienty, stress, selfharm
+    description: <string> - An explanation of this mood.
+}
+```
+
+### Mindful Mood Journal Entry
+- A Mindful mood journal entry can be created, retrieved, updated and deleted
+- A Mindful mood journal entry has the following schema:
+```
+{
+    id: <UUID> [required] - A unique identifier for the mood journal entry
+    userId: <UUID> [required] - The user that is associated to this mood journal entry
+    dateTimeCreated: <datetime> [required] - The date and time that the mood journal entry was recorded
+    notes: <string> - Text describing additional context around this mood journal entry
+    moods: <Array> [
+        {
+            moodId: <UUID> - The id of the mood
+            score: <integer> - An integer value of 1-5
+        }
+    ]
+}
+```
+
+### The Assignment
+- The above are the basic requirements for this application's API endpoints.  We will leave it up to you to improve upon it as you feel fit. However, we are focusing on completion of these basic requirements and not on an incompleted but improved API.
+- You are free to design the database as you feel fit for storing the specified information.
+- Your work should be tested.
