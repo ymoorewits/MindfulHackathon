@@ -147,5 +147,5 @@ export async function add(ctx: any) : Promise<any> {
     const lname = ctx.request.data.lname;
     return ctx.response.json({ email, fname, lname }); 
 } 
-appversion.attributes = { method: 'POST' };
+add.attributes = { method: 'POST' };
 ```
