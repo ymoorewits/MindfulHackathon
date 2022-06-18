@@ -126,7 +126,7 @@ http://localhost/app/server/index/appversion
 appversion.attributes = { method: 'GET' };
 ```
 
-### How do I access data passed to an endpoint? 
+### How do I access data passed to an API endpoint? 
 
 - Let's say we had the following HTTP request arrive at our application's API endpoint:<br/>
 Request URL: `http://localhost/app/server/user/add?foo=bar`<br/>
@@ -150,3 +150,27 @@ export async function add(ctx: any) : Promise<any> {
 } 
 add.attributes = { method: 'POST' };
 ```
+
+### How do I debug my API endpoint? 
+
+- Using the previous example you would debug your API endpoint by updating your code as follows:
+```
+export async function add(ctx: any) : Promise<any> {
+    debugger;
+    const foo = ctx.request.params.foo;
+    const email = ctx.request.data.email;
+    const fname = ctx.request.data.fname;
+    const lname = ctx.request.data.lname;
+    return ctx.response.json({ foo, email, fname, lname }); 
+} 
+add.attributes = { method: 'POST' };
+```
+
+- Next open your browser (these instructions are for the Chrome browser) and enter into the navigation bar:
+```
+chrome://inspect
+```
+- You may need to wait a few seconds for chrome to display that your `Remote Target #LOCALHOST` server is available for inspection.
+- Click on `inspect` to open Chrome's debugging console.
+- Submit a request to your API endpoint and you should be now able to see your code in the Chrome debugging and execution paused at the line:
+```debugger;```
