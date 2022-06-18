@@ -205,7 +205,7 @@ debugger;
 ```
 ctx.tenant.db
 ```
-- The .db property is a neo4j Session object. Please refer to the neo4j [documenation(https://neo4j.com/docs/javascript-manual/current/session-api/)] on how to use the Session API.
+- The .db property is a neo4j Session object. Please refer to the neo4j [documenation](https://neo4j.com/docs/javascript-manual/current/session-api/) on how to use the Session API.
 - The following is an example of storing JSON data that was passed to an API endpoint.
 ```
 export async function add(ctx: any) : Promise<any> {
