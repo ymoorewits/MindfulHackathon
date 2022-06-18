@@ -129,7 +129,7 @@ appversion.attributes = { method: 'GET' };
 ### How do I access data passed to an endpoint? 
 
 - Let's say we had the following HTTP request arrive at our application's API endpoint:<br/>
-Request URL: `http://localhost/app/server/user/add`<br/>
+Request URL: `http://localhost/app/server/user/add?foo=bar`<br/>
 Request Method: `POST`<br/>
 Request Body:<br/>
 ```
@@ -142,10 +142,11 @@ Request Body:<br/>
 - Then our API endpoint should be coded in a file named `user.ts` in the `server` folder as follows:
 ```
 export async function add(ctx: any) : Promise<any> {
+    const foo = ctx.request.params.foo;
     const email = ctx.request.data.email;
     const fname = ctx.request.data.fname;
     const lname = ctx.request.data.lname;
-    return ctx.response.json({ email, fname, lname }); 
+    return ctx.response.json({ foo, email, fname, lname }); 
 } 
 add.attributes = { method: 'POST' };
 ```
