@@ -121,7 +121,7 @@ http://localhost/app/server/index/appversion
 { major: 0, minor: 0, patch: 6 }
 ```
 
-- Please note that any valid HTTP method (e.g., `GET`,`POST`,`PUT`,`DELETE`,`OPTIONS`, etc.) can be specified in the line:
+- Please note that any valid HTTP method (e.g., `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, etc.) can be specified in the line:
 ```
 appversion.attributes = { method: 'GET' };
 ```
