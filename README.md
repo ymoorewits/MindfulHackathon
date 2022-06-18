@@ -69,7 +69,11 @@ http://localhost/app/client/index.html
 
 - You should see displayed in your browser the message `Hello JSphere`. 
 
-- **Once the JSphere server is running you will no longer have access to the JSphere CLI.  You will have to open another instance of your computer’s CLI and start the JSphere CLI tool again.** 
+- ***Once the JSphere server is running you will no longer have access to the JSphere CLI.  You will have to open another instance of your computer’s CLI and start the JSphere CLI tool again.***
+- If you have made any changes to your application's configuration or code then you can tell JSphere server to reset your localhost tenant by entering the following command in the JSphere CLI:
+```
+reset localhost
+```
 
 
 ## JSphere Basics 
@@ -177,3 +181,23 @@ chrome://inspect
 debugger;
 ```
 - ***Please note that your code must be syntactically correct in order to be able to debug your code using the `debugger` statement.***
+
+### How do I access my neo4j database in my API endpoint code? 
+
+- You will first need to configure your localhost tenant to connect to your database.
+- Open the file `localhost.json` in your `.jsphere/.tenants` folder.
+- Modify your file to look as follows:
+```
+{
+    "application": "app",
+    "appSettings": {
+        "dbHostname": "bolt+s://<replace with your database's hostname>",
+        "dbDatabase": "neo4j",
+        "dbUsername": "neo4j",
+        "dbPassword": "<replace with your database's password>"
+    },
+    "contextExtensions": {
+        "db": "http://deno.land/x/jsphere/neo4j.ts"
+    }
+}
+```
