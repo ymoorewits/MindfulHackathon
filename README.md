@@ -172,5 +172,7 @@ chrome://inspect
 ```
 - You may need to wait a few seconds for chrome to display that your `Remote Target #LOCALHOST` server is available for inspection.
 - Click on `inspect` to open Chrome's debugging console.
-- Submit a request to your API endpoint and you should be now able to see your code in the Chrome debugging and execution paused at the line:
-```debugger;```
+- Submit a request to your API endpoint and you should be now able to see your code in the Chrome debugging console showing that execution is paused at the line:
+```
+debugger;
+```
