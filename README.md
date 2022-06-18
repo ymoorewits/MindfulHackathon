@@ -91,7 +91,7 @@ http://localhost/app/client/index.html
  
 ### How do I create an API endpoint? 
 
-- If you look in your `app` package (folder), in the server subfolder, you will see a file named `index.ts`.  Inside the file `index.ts` you will see an example of a function that defines an API endpoint.
+- If you look in your `app` package (folder), in the `server` subfolder, you will see a file named `index.ts`.  Inside the file `index.ts` you will see an example of a function that defines an API endpoint.
 
 ```
 export async function message(ctx: any) : Promise<any> {
@@ -100,7 +100,7 @@ export async function message(ctx: any) : Promise<any> {
 message.attributes = { method: 'GET' };
 ```
 
-- You can copy the code and paste it below its self. 
+- You can copy the code and paste it below it's self. 
 
 - Modify the copied code to look like the following:
  
@@ -119,4 +119,9 @@ http://localhost/app/server/index/appversion
 - You should see displayed in your browser the following:
 ```
 { major: 0, minor: 0, patch: 6 }
+```
+
+- Please note that any valid HTTP method (e.g., `GET`,`POST`,`PUT`,`DELETE`,`OPTIONS`, etc.) can be specified in the line:
+```
+appversion.attributes = { method: 'GET' };
 ```
