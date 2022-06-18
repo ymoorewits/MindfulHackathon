@@ -84,7 +84,7 @@ http://localhost/app/client/index.html
 
 - One or more folders (e.g., `app`), referred to as packages, which contain all of the application’s artefacts. 
 
-- Each project package contains two subfolders, one named client and the other named server. 
+- Each project package contains two subfolders, one named `client` and the other named `server`. 
 
 - For the Hackathon you will only need to use the server folder. 
 
@@ -124,4 +124,28 @@ http://localhost/app/server/index/appversion
 - Please note that any valid HTTP method (e.g., `GET`, `POST`, `PUT`, `DELETE`, `OPTIONS`, etc.) can be specified in the line:
 ```
 appversion.attributes = { method: 'GET' };
+```
+
+### How do I access data passed to an endpoint? 
+
+- Let's say we had the following HTTP request arrive at our application's API endpoint:
+Request URL: `http://localhost/app/server/user/add`
+Request Method: `POST`
+Request Body:
+```
+{
+    "email": "adam@eden.com",
+    "fname": "adam",
+    "lname": ""
+}
+```
+- Then our API endpoint should be coded in a file named `user.ts` in the `server` folder as follows:
+```
+export async function add(ctx: any) : Promise<any> {
+    const email = ctx.request.data.email;
+    const fname = ctx.request.data.fname;
+    const lname = ctx.request.data.lname;
+    return ctx.response.json({ email, fname, lname }); 
+} 
+appversion.attributes = { method: 'POST' };
 ```
