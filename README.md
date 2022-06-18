@@ -201,3 +201,16 @@ debugger;
     }
 }
 ```
+- You will now be able to access your neo4j database in your API endpoint code using the following:
+```
+ctx.tenant.db
+```
+- The .db property is a neo4j Session object. Please refer to the neo4j [documenation(https://neo4j.com/docs/javascript-manual/current/session-api/)] on how to use the Session API.
+- The following is an example of storing JSON data that was passed to an API endpoint.
+```
+export async function add(ctx: any) : Promise<any> {
+    ctx.tenant.db.run(`CREATE (u:User $user)`, { user: ctx.request.data });
+    return ctx.response.text('User created'); 
+} 
+add.attributes = { method: 'POST' };
+```
