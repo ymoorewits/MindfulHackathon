@@ -176,3 +176,4 @@ chrome://inspect
 ```
 debugger;
 ```
+- ==Please note that your code must be syntactically correct in order to be able to the dubugger.==
