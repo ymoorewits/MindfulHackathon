@@ -82,7 +82,7 @@ http://localhost/app/client/index.html
 
 - A folder named `.jsphere` which contains the projects configuration information. 
 
-- One or more folders (e.g., app), referred to as packages, which contain all of the application’s artefacts. 
+- One or more folders (e.g., `app`), referred to as packages, which contain all of the application’s artefacts. 
 
 - Each project package contains two subfolders, one named client and the other named server. 
 
@@ -91,7 +91,7 @@ http://localhost/app/client/index.html
  
 ### How do I create an API endpoint? 
 
-- If you look in your app package (folder), in the server subfolder, you will see a file named `index.ts`.  Inside the file `index.ts` you will see an example of a function that defines an API endpoint.
+- If you look in your `app` package (folder), in the server subfolder, you will see a file named `index.ts`.  Inside the file `index.ts` you will see an example of a function that defines an API endpoint.
 
 ```
 export async function message(ctx: any) : Promise<any> {
