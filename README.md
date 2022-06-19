@@ -30,6 +30,7 @@ Documentation for the Mindful Hackathon
   deno install -n=jsphere --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js
   ```
 
+
 ## Project Setup 
 
 ### Create a project 
@@ -42,7 +43,10 @@ Documentation for the Mindful Hackathon
 ```
 jsphere 
 ```
-
+- There seems to be an issue with running this on a Macbook so you can try the following to start the JSphere CLI:
+```
+deno run --allow-all --reload --no-check https://deno.land/x/jsphere/cli.js
+```
 - This will start the JSphere CLI tool and you should see a `JSPHERE>` prompt. 
 
 - In the JSphere CLI enter the following: 
@@ -74,7 +78,10 @@ http://localhost/app/client/index.html
 ```
 reset localhost
 ```
-
+- If you had to restart your JSphere CLI and wanted to get back to your project then use the following command:
+```
+use Mindful
+```
 
 ## JSphere Basics 
 
@@ -216,6 +223,11 @@ add.attributes = { method: 'POST' };
 ```
 
 ## The Mindful Application's API Requirements 
+
+***Please note that you can use the following statement in your code to generate a UUID:***
+```
+ctx.utils.createId();
+```
 
 ### Mindful User
 - A Mindful user can be created, retrieved, updated and deleted.
